@@ -1,0 +1,24 @@
+# `converter\composers\record_materialisation` module map
+
+18 Python files. [All packages](../../../MODULE_INDEX.md).
+
+| Python source | Logic note | Owning guide |
+|---|---|---|
+| `converter/composers/record_materialisation/__init__.py` | [Module](../../../modules/converter/composers/record_materialisation/__init__.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_block_writer.py` | [Module](../../../modules/converter/composers/record_materialisation/record_block_writer.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_entry_renderer.py` | [Module](../../../modules/converter/composers/record_materialisation/record_entry_renderer.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_field.py` | [Module](../../../modules/converter/composers/record_materialisation/record_field.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_field_plan.py` | [Module](../../../modules/converter/composers/record_materialisation/record_field_plan.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_host_resolver.py` | [Module](../../../modules/converter/composers/record_materialisation/record_host_resolver.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_layout_generator.py` | [Module](../../../modules/converter/composers/record_materialisation/record_layout_generator.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_layout_geometry.py` | [Module](../../../modules/converter/composers/record_materialisation/record_layout_geometry.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_line_utils.py` | [Module](../../../modules/converter/composers/record_materialisation/record_line_utils.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_materialisation_guard.py` | [Module](../../../modules/converter/composers/record_materialisation/record_materialisation_guard.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_move_generator.py` | [Module](../../../modules/converter/composers/record_materialisation/record_move_generator.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_move_scanner.py` | [Module](../../../modules/converter/composers/record_materialisation/record_move_scanner.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_picture_sizer.py` | [Module](../../../modules/converter/composers/record_materialisation/record_picture_sizer.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_plan.py` | [Module](../../../modules/converter/composers/record_materialisation/record_plan.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_plan_builder.py` | [Module](../../../modules/converter/composers/record_materialisation/record_plan_builder.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_redefines_renderer.py` | [Module](../../../modules/converter/composers/record_materialisation/record_redefines_renderer.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_row_reader.py` | [Module](../../../modules/converter/composers/record_materialisation/record_row_reader.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |
+| `converter/composers/record_materialisation/record_sites.py` | [Module](../../../modules/converter/composers/record_materialisation/record_sites.md) | [06_RECORD_COPYBOOK_AND_DATE_CONTRACTS](../../../06_RECORD_COPYBOOK_AND_DATE_CONTRACTS.md) |

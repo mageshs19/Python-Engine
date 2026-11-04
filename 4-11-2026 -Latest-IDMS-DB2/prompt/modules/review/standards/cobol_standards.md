@@ -1,0 +1,46 @@
+# `review/standards/cobol_standards.py`
+
+Source: [review/standards/cobol_standards.py](../../../../review/standards/cobol_standards.py) | 500 lines.
+Owning logic guide: [prompt/09_REVIEW_AND_RELEASE_GATES.md](../../../09_REVIEW_AND_RELEASE_GATES.md).
+Source SHA-256: `f966c8afa054fa5b71ae8121fd70f9c975a0318d2fa5ed566112ca78bab63f8d`.
+
+Generated source map. Read this file to locate the relevant symbols, then inspect the touched source before changing behavior. Lexical calls/branches are not a proof of runtime wiring or semantic equivalence.
+
+## Responsibility
+
+Source-declared description (not an independently verified runtime claim):
+
+> Expected values. THIS FILE IS OWNED BY THE COBOL TEAM.
+
+## Module-level bindings
+
+`LINE_WIDTH` (L12), `BODY_FIRST_COLUMN` (L13), `BODY_LAST_COLUMN` (L14), `VALID_INDICATORS` (L15), `ENFORCE_SEQUENCE_START` (L16), `LEFT_SEQUENCE_START` (L17), `RIGHT_SEQUENCE_START` (L18), `REQUIRED_TOKENS` (L21), `REQUIRED_LINES` (L22), `SQL_LOCATION_FIELD` (L26), `SQL_LOCATION_PICTURE` (L27), `UNIQUE_MARKERS` (L28), `FORBIDDEN_MARKERS` (L33), `IDMS_EXECUTABLE_PREFIXES` (L39), `IDMS_DECLARATIVE_PREFIXES` (L43), `IDMS_TOKENS` (L57), `IDMS_CLAUSES` (L64), `COMPILER_OPTION_LINE` (L67), `NAME_PREFIX` (L68), `NAME_SOURCE_MARKER` (L69), `NAME_TARGET_MARKER` (L70), `SQL_ERROR_PARAGRAPH` (L73), `LEGACY_SQL_ERROR_PARAGRAPH` (L74), `AREA_A_FIRST_COLUMN` (L77), `AREA_A_LAST_COLUMN` (L78), `AREA_B_FIRST_COLUMN` (L79), `AREA_A_MAX_INDENT` (L80), `AREA_B_MIN_INDENT` (L81), `DIVISION_NAMES` (L83), `AREA_A_LEVEL_NUMBERS` (L84), `AREA_B_LEVEL_NUMBERS` (L85), `CONTINUATION_INDICATOR` (L90), `ENFORCE_AREA_B_STATEMENT_INDENT` (L91), `AREA_B_SQL_MIN_INDENT` (L93), `SQL_BLOCK_START` (L95), `SQL_BLOCK_END` (L96), `SQL_STATUS_BLOCK_START` (L97), `SQL_STATUS_BLOCK_END` (L98), `NON_PARAGRAPH_WORDS` (L102), `LEFT_SEQUENCE_STEP` (L117), `RIGHT_SEQUENCE_STEP` (L118), `ENFORCE_SEQUENCE_STEP` (L119), `ALLOW_SEQUENCE_GAPS` (L120), `DCLGEN_GROUP_PREFIX` (L123), `EXCLUDED_INCLUDE_NAMES` (L124), `INCLUDE_STATEMENT_TEMPLATE` (L125), `FORBIDDEN_COPY_PREFIXES` (L126), `ENFORCE_INCLUDE_IN_WORKING_STORAGE` (L127), `ENFORCE_COPY_MEMBER_RESOLUTION` (L130), `COPYBOOK_RECORD_LEVEL` (L131), `MISSING_MAPPING_MARKERS` (L134), `SQL_LOCATION_MOVE_SUFFIX` (L149), `SQL_LOCATION_LOOKBACK` (L150), `ENFORCE_SQL_LOCATION_BEFORE_SQL` (L151), `CONTINUE_STATEMENT` (L153), `NON_EXECUTABLE_SQL_VERBS` (L154), `DB2_TABLE_SUFFIX_EQUIVALENTS` (L157), `VARCHAR_SUBFIELD_SUFFIXES` (L163), `RETRIEVAL_SQL_VERBS` (L166), `SELECT_REQUIRED_CLAUSES` (L167), `ENFORCE_SELECT_WHERE` (L168), `WRITE_SQL_VERBS` (L171), `INSERT_REQUIRED_CLAUSES` (L172), `UPDATE_REQUIRED_CLAUSES` (L173), `DELETE_REQUIRED_CLAUSES` (L174), `UPDATE_QUERYNO` (L175), `ENFORCE_QUERYNO` (L176), `USE_EVALUATE_SQLCODE` (L179), `SQLCODE_EVALUATE_START` (L180), `SQLCODE_EVALUATE_END` (L181), `SQLCODE_WHEN_OTHER` (L182), `SQLCODE_ZERO_BRANCHES` (L183), `SQLCODE_NOT_FOUND_BRANCH` (L184), `END_OF_CURSOR_CONDITION` (L185), `SQLCODE_LOOKAHEAD` (L186), `LEGACY_SQLCODE_FORMS` (L188), `COMMIT_STATEMENT` (L195), `IDMS_COMMIT_VERB` (L196), `EXECUTABLE_SQL_VERBS` (L197), `SQLCODE_EXEMPT_VERBS` (L201), `ENFORCE_NO_PERIOD_IN_EVALUATE` (L206), `CURSOR_DECLARE_VERB` (L209), `CURSOR_REQUIRED_CLAUSES` (L210), `CURSOR_SELECT_CLAUSES` (L211), `CURSOR_SELECT_ALL` (L212), `ENFORCE_CURSOR_WITH_HOLD` (L213), `ENFORCE_CURSOR_MARKERS` (L215), `ENFORCE_CURSOR_FOR_READ_ONLY` (L216), `ENFORCE_CURSOR_EXPLICIT_COLUMNS` (L217), `CURSOR_DECLARATION_MARKER` (L218), `CURSOR_OPERATIONS` (L221), `CURSOR_FETCH_OFFSET` (L222), `CURSOR_CLOSE_OFFSET` (L223), `CURSOR_OPEN_NUMBERS` (L224), `ENFORCE_CURSOR_OPEN_NUMBERS` (L225), `CURSOR_PARAGRAPH_MARKER` (L226), `CURSOR_EOC_SUFFIX` (L229), `CURSOR_NOT_EOC_SUFFIX` (L230), `CURSOR_FLAGS_MARKER` (L231), `ENFORCE_EOC_FLAG_LOOP` (L232), `CHILD_CURSOR_MINIMUM_NUMBER` (L235), `UPDATE_AUDIT_PREFIXES` (L238), `INSERT_ONLY_AUDIT_PREFIXES` (L241), `BROAD_UPDATE_RATIO` (L242), `ENFORCE_CONSERVATIVE_UPDATE` (L243), `KEY_TEXT_MARKERS` (L246), `IDENTITY_KEY_PREFIXES` (L247), `HOST_REFERENCE_MARKER` (L248), `FORBIDDEN_WHERE_PREDICATES` (L249), `ENFORCE_WHERE_HOST_VARIABLES` (L250), `ENFORCE_WHERE_NO_FOREIGN_KEY` (L251), `DATE_COLUMN_PREFIXES` (L254), `DB2_DATE_SENTINEL` (L255), `DATE_STAGING_FIELDS` (L256), `TIMESTAMP_SOURCE_FIELD` (L257), `USER_SOURCE_FIELD` (L258), `AUDIT_MOVE_LOOKBACK` (L259), `ENFORCE_AUDIT_MOVES_BEFORE_UPDATE` (L260), `ENFORCE_DATE_STAGING` (L261), `RESTART_PARAGRAPHS` (L277), `RESTART_SQL_PARAGRAPH_PREFIX` (L284), `RESTART_SQL_OPERATIONS` (L285), `RESTART_ABEND_CALL` (L286), `RESTART_STATUS_COMPLETE` (L287), `RESTART_STATUS_INCOMPLETE` (L288), `RESTART_TABLE_NAME_HINTS` (L291), `RESTART_CONTROL_HINTS` (L296), `RESTART_SKIP_MARKERS` (L299), `SQL_TABLE_KEYWORDS` (L308), `ENFORCE_TABLE_AUTHORITY` (L309), `ENFORCE_COLUMN_AUTHORITY` (L310), `HOST_QUALIFIER_KEYWORDS` (L313), `ENFORCE_HOST_NAME_EXACTNESS` (L314), `ENFORCE_PICTURE_LENGTH_MATCH` (L317), `PICTURE_LENGTH_TOLERANCE` (L318), `COMPARABLE_LENGTH_TYPES` (L324), `VARCHAR_TYPES` (L329), `ENFORCE_NO_IDMS_QUALIFIER` (L335), `LRF_EXPANSION_MARKER` (L359), `LRF_KEEP_MARKER` (L362), `LRF_WITHIN_KEYWORD` (L364), `LRF_MARKER_CONTINUATION_LINES` (L369), `LR_STATUS_FIELD` (L371), `LR_CTRL_TOKENS` (L372), `LR_QUALIFIER` (L373), `IDMS_STATUS_TOKENS` (L377), `SQLCODE_END_TESTS` (L383), `LRF_UNRESOLVED_TEXTS` (L391), `LRF_UNMAPPED_TEXT` (L395), `LRF_EXTRA_FILTER_TEXT` (L396), `ENFORCE_LRF_PATH_RESOLUTION` (L398), `CS_PROGRAM_FIELD` (L411), `CS_PROGRAM_PICTURE` (L412), `CS_PROGRAM_LEVELS` (L413), `ENFORCE_END_PROGRAM` (L418), `SQL_ERROR_BODY` (L428), `SQL_ERROR_INCLUDE` (L429), `ENFORCE_AREA_B_SQL_INDENT` (L435), `ENFORCE_CHILD_FETCH_EARLY_STOP` (L443), `ENFORCE_RESTART_QUERYNO` (L450), `RESTART_SELECT_QUERYNO` (L451), `RESTART_UPDATE_QUERYNO` (L452), `RESTART_INSERT_QUERYNO` (L453), `ENFORCE_SQL_LOCATION_DECLARATION` (L471), `SQL_LOCATION_MOVE_PREFIXES` (L481), `SQL_LOCATION_MOVE_PREFIX` (L484), `SQL_LOCATION_SOURCE_COPYBOOK` (L485), `LEGACY_EOC_LOOP_STATEMENTS` (L487), `LEGACY_EOC_CONDITIONS` (L500)
+
+## Import declarations
+
+```python
+from __future__ import annotations
+```
+
+## Importers (32)
+
+Static imports only; dependency injection, string imports and runtime dispatch can add edges.
+
+- [review/checks/chk_01_line_layout.py](../checks/chk_01_line_layout.md)
+- [review/checks/chk_02_db2_infrastructure.py](../checks/chk_02_db2_infrastructure.md)
+- [review/checks/chk_03_residual_idms.py](../checks/chk_03_residual_idms.md)
+- [review/checks/chk_04_program_header.py](../checks/chk_04_program_header.md)
+- [review/checks/chk_05_sql_error_routing.py](../checks/chk_05_sql_error_routing.md)
+- [review/checks/chk_06_area_alignment.py](../checks/chk_06_area_alignment.md)
+- [review/checks/chk_07_sequence_continuity.py](../checks/chk_07_sequence_continuity.md)
+- [review/checks/chk_08_dclgen_include_integrity.py](../checks/chk_08_dclgen_include_integrity.md)
+- [review/checks/chk_09_record_retrieval_conversion.py](../checks/chk_09_record_retrieval_conversion.md)
+- [review/checks/chk_10_record_modification_conversion.py](../checks/chk_10_record_modification_conversion.md)
+- [review/checks/chk_11_sqlcode_commit_conversion.py](../checks/chk_11_sqlcode_commit_conversion.md)
+- [review/checks/chk_12_cursor_declaration.py](../checks/chk_12_cursor_declaration.md)
+- [tests/test_eoc_vocabulary_agrees_across_the_review_boundary.py](../../tests/test_eoc_vocabulary_agrees_across_the_review_boundary.md)
+- 19 further importers are recorded in [the source manifest](../../../source_manifest.json).
+
+## Change responsibility
+
+After modifying this Python file, review [prompt/09_REVIEW_AND_RELEASE_GATES.md](../../../09_REVIEW_AND_RELEASE_GATES.md), update any affected behavioral contracts, then run `python prompt/tools/maintain_docs.py refresh` and `python prompt/tools/maintain_docs.py check` from the repository root. Keep scratch Markdown only in `prompt/temp/`. Generated notes must not be hand-edited; add explanations to the owning guide.

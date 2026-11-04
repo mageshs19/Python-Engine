@@ -1,0 +1,22 @@
+{
+  "baseline_archive": "IDMS_DB2_V123_4310_Full_Audit_Engine.zip",
+  "baseline_archive_sha256": "13806ea4929b3e6e400abdee2b57927c37ca538cf34d651062a8e5fcaee33592",
+  "legacy_markdown_deleted": 95,
+  "existing_python_files_unchanged": 1025,
+  "existing_non_markdown_files_preserved": 1292,
+  "existing_non_markdown_files_byte_identical": 1291,
+  "existing_non_markdown_files_changed": [
+    "pyproject.toml"
+  ],
+  "existing_non_markdown_files_missing": [],
+  "existing_cobol_files_unchanged": 84,
+  "permanent_guide_count": 16,
+  "module_note_count": 1025,
+  "package_index_count": 90,
+  "documentation_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "fresh_converter_or_mainframe_run": false,
+  "only_existing_file_change": "pyproject.toml readme path: README.md -> readme.md"
+}

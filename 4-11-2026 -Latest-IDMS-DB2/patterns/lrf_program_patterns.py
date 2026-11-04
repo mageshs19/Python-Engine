@@ -1,0 +1,107 @@
+# LOCATION: patterns/lrf_program_patterns.py
+# ACTION: CREATE NEW FILE
+"""Regex for LRF syntax appearing in the COBOL PROGRAM (not the subschema).
+
+patterns/lrf_patterns.py owns the SUBSCHEMA source regex.
+This module owns what the program itself writes.
+"""
+
+from __future__ import annotations
+
+import re
+
+# OBTAIN FIRST VMBTL03-R01 WHERE SWEEP-VMBFAS.
+# OBTAIN NEXT  VMBTL03-R01 WHERE VMBFAS-BY-VMBSIAS.
+LR_OBTAIN_WHERE_PATTERN = re.compile(
+    r"^\s*OBTAIN\s+(?:KEEP\s+)?(?P<mode>FIRST|NEXT|EACH|LAST|PRIOR)\s+"
+    r"(?P<lr>[A-Z][A-Z0-9-]*)\s+"
+    r"WHERE\s+(?P<keyword>[A-Z][A-Z0-9-]*)\s*\.?\s*$",
+    flags=re.IGNORECASE,
+)
+
+# Loose prefix form: matches an LRF OBTAIN ... WHERE whose WHERE clause
+# carries extra AND/OR conditions and/or continues onto following source
+# lines (so LR_OBTAIN_WHERE_PATTERN, which requires the keyword to end the
+# line, does not match). Used to keep-and-comment the whole statement.
+LR_OBTAIN_WHERE_PREFIX_PATTERN = re.compile(
+    r"^\s*OBTAIN\s+(?:KEEP\s+)?(?P<mode>FIRST|NEXT|EACH|LAST|PRIOR)\s+"
+    r"(?P<lr>[A-Z][A-Z0-9-]*)\s+"
+    r"WHERE\b",
+    flags=re.IGNORECASE,
+)
+
+# Start of an LRF OBTAIN whose WHERE clause may begin on a later physical
+# line. This is intentionally broader than LR_OBTAIN_WHERE_PREFIX_PATTERN;
+# callers must confirm that a bounded look-ahead actually finds WHERE before
+# treating it as LRF, so classic OBTAIN ... WITHIN statements are untouched.
+LR_OBTAIN_START_PATTERN = re.compile(
+    r"^\s*OBTAIN\s+(?:KEEP\s+)?(?P<mode>FIRST|NEXT|EACH|LAST|PRIOR)\s+"
+    r"(?P<lr>[A-Z][A-Z0-9-]*)\b",
+    flags=re.IGNORECASE,
+)
+
+# ERASE VMBTL03-R01 WHERE ERASE-VMBSIAS.
+LR_ERASE_WHERE_PATTERN = re.compile(
+    r"^\s*ERASE\s+(?P<lr>[A-Z][A-Z0-9-]*)\s+"
+    r"WHERE\s+(?P<keyword>[A-Z][A-Z0-9-]*)\s*\.?\s*$",
+    flags=re.IGNORECASE,
+)
+
+# MODIFY / STORE logical record forms.
+LR_MODIFY_WHERE_PATTERN = re.compile(
+    r"^\s*(?P<verb>MODIFY|STORE)\s+(?P<lr>[A-Z][A-Z0-9-]*)\s+"
+    r"WHERE\s+(?P<keyword>[A-Z][A-Z0-9-]*)\s*\.?\s*$",
+    flags=re.IGNORECASE,
+)
+
+# LR-STATUS = 'VMBFAS-EOA'   /   LR-STATUS NOT = 'VMBFAS-EOA'
+LR_STATUS_CONDITION_PATTERN = re.compile(
+    r"\bLR-STATUS\b\s*(?P<operator>NOT\s*=|=|NOT\s+EQUAL\s+TO|EQUAL\s+TO)\s*"
+    r"'(?P<literal>[^']*)'",
+    flags=re.IGNORECASE,
+)
+
+# Any bare LR-STATUS reference (MOVE, DISPLAY, IF ... etc.)
+LR_STATUS_TOKEN_PATTERN = re.compile(
+    r"\bLR-STATUS\b",
+    flags=re.IGNORECASE,
+)
+
+# KY-SIFORM OF VMBSIAS OF LR  ->  KY-SIFORM OF VMBSIAS
+OF_LR_SUFFIX_PATTERN = re.compile(
+    r"(?P<head>\b[A-Z][A-Z0-9-]*\s+OF\s+[A-Z][A-Z0-9-]*)\s+OF\s+LR\b",
+    flags=re.IGNORECASE,
+)
+
+# A trailing bare "OF LR" with no record qualifier.
+BARE_OF_LR_PATTERN = re.compile(
+    r"\s+OF\s+LR\b",
+    flags=re.IGNORECASE,
+)
+
+# COPY IDMS SUBSCHEMA-LR-CTRL.
+COPY_SUBSCHEMA_LR_CTRL_PATTERN = re.compile(
+    r"^\s*COPY\s+IDMS\s+SUBSCHEMA-LR-CTRL\s*\.",
+    flags=re.IGNORECASE,
+)
+# LOCATION: patterns/lrf_program_patterns.py
+# ACTION: APPEND at the end of the file
+
+from rules.lrf_conversion_rules import LR_STATUS_TOKEN_REPLACEMENT_ORDER
+
+# Any generated IDMS status token, as a whole word.
+#
+# The alternation is built FROM the rules mapping, so adding a token
+# there cannot leave the pattern behind. A hyphen is a non-word
+# character, so \b anchors correctly at both ends of DB-END-OF-SET.
+LR_STATUS_TOKEN_REPLACEMENT_PATTERN = re.compile(
+    r"\b(?P<token>"
+    + "|".join(re.escape(t) for t in LR_STATUS_TOKEN_REPLACEMENT_ORDER)
+    + r")\b",
+    flags=re.IGNORECASE,
+)
+LR_STATUS_ABBREVIATED_PATTERN = re.compile(
+    r"\bLR-STATUS\b\s*(?:NOT\s*=|=|NOT\s+EQUAL\s+TO|EQUAL\s+TO)\s*"
+    r"'[^']*'\s*(?:OR|AND)\s+'",
+    flags=re.IGNORECASE,
+)

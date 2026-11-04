@@ -1,0 +1,39 @@
+# `converter/generators/cursor_paragraph/__init__.py`
+
+Source: [converter/generators/cursor_paragraph/__init__.py](../../../../../converter/generators/cursor_paragraph/__init__.py) | 16 lines.
+Owning logic guide: [prompt/05_SQL_CURSOR_AND_BUSINESS_FLOW.md](../../../../05_SQL_CURSOR_AND_BUSINESS_FLOW.md).
+Source SHA-256: `45e787195ac8d17c35527aa932130d7588585dd71b058c307e9b66f211006350`.
+
+Generated source map. Read this file to locate the relevant symbols, then inspect the touched source before changing behavior. Lexical calls/branches are not a proof of runtime wiring or semantic equivalence.
+
+## Responsibility
+
+Source-declared description (not an independently verified runtime claim):
+
+> Cursor paragraph body generation.
+
+## Module-level bindings
+
+`__all__` (L16)
+
+## Import declarations
+
+```python
+from converter.generators.cursor_paragraph.cursor_paragraph_body_builder import CursorParagraphBodyBuilder
+from converter.generators.cursor_paragraph.cursor_fetch_paragraph import FetchParagraphBuilder
+```
+
+## Local dependency notes
+
+- [converter/generators/cursor_paragraph/cursor_fetch_paragraph.py](cursor_fetch_paragraph.md)
+- [converter/generators/cursor_paragraph/cursor_paragraph_body_builder.py](cursor_paragraph_body_builder.md)
+
+## Importers (1)
+
+Static imports only; dependency injection, string imports and runtime dispatch can add edges.
+
+- [converter/generators/cursor_paragraph/cursor_fetch_paragraph.py](cursor_fetch_paragraph.md)
+
+## Change responsibility
+
+After modifying this Python file, review [prompt/05_SQL_CURSOR_AND_BUSINESS_FLOW.md](../../../../05_SQL_CURSOR_AND_BUSINESS_FLOW.md), update any affected behavioral contracts, then run `python prompt/tools/maintain_docs.py refresh` and `python prompt/tools/maintain_docs.py check` from the repository root. Keep scratch Markdown only in `prompt/temp/`. Generated notes must not be hand-edited; add explanations to the owning guide.

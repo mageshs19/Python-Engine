@@ -1,0 +1,21 @@
+{
+  "version": "V98",
+  "date": "2026-10-26",
+  "scope": "Lifecycle numbering and cursor paragraph normalization for six current DB2 COBOL candidates",
+  "automated_tests": {
+    "compileall": "passed",
+    "pytest_exit_code": 0,
+    "passed": 1880,
+    "skipped": 24,
+    "failed": 0
+  },
+  "mainframe_precompile_or_compile_performed": false,
+  "programs": {
+    "VMDZ1526": {"lines": 673, "exec_sql": 15, "perform_sqlerror": 10, "release_issues": 0, "unresolved_perform_references": 0, "fixed_format_width_80": true, "business_parity_issues": 0, "business_parity_reviews": 1},
+    "VMDZ1567": {"lines": 441, "exec_sql": 10, "perform_sqlerror": 6, "release_issues": 0, "unresolved_perform_references": 0, "fixed_format_width_80": true, "business_parity_issues": 0, "business_parity_reviews": 2, "timestamp_numbering_exception": "600-GET-TIMESTAMP retained because 1100-UPDATE-DZBFAR already exists"},
+    "VMDZ4302": {"lines": 562, "exec_sql": 15, "perform_sqlerror": 6, "release_issues": 0, "unresolved_perform_references": 0, "fixed_format_width_80": true, "business_parity_issues": 0, "business_parity_reviews": 0},
+    "VMDZ4310": {"lines": 529, "exec_sql": 7, "perform_sqlerror": 4, "release_issues": 0, "unresolved_perform_references": 0, "fixed_format_width_80": true, "business_parity_issues": 0, "business_parity_reviews": 0},
+    "VMDZ4420": {"lines": 504, "exec_sql": 13, "perform_sqlerror": 6, "release_issues": 0, "unresolved_perform_references": 0, "fixed_format_width_80": true, "business_parity_issues": 0, "business_parity_reviews": 0},
+    "VMDZ7200": {"lines": 930, "exec_sql": 8, "perform_sqlerror": 3, "release_issues": 0, "unresolved_perform_references": 0, "fixed_format_width_80": true, "business_parity_issues": 0, "business_parity_reviews": 0}
+  }
+}

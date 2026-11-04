@@ -1,0 +1,21 @@
+test_broken_local_link_rejected (test_maintain_docs.DocumentationTests.test_broken_local_link_rejected) ... ok
+test_changed_guide_satisfies_review (test_maintain_docs.DocumentationTests.test_changed_guide_satisfies_review) ... ok
+test_complete_coverage_and_valid_navigation (test_maintain_docs.DocumentationTests.test_complete_coverage_and_valid_navigation) ... ok
+test_data_model_fields_documented (test_maintain_docs.DocumentationTests.test_data_model_fields_documented) ... ok
+test_engine_python_is_never_modified (test_maintain_docs.DocumentationTests.test_engine_python_is_never_modified) ... ok
+test_guide_review_required_before_refresh (test_maintain_docs.DocumentationTests.test_guide_review_required_before_refresh) ... ok
+test_inline_code_is_not_a_markdown_link (test_maintain_docs.DocumentationTests.test_inline_code_is_not_a_markdown_link) ... ok
+test_malformed_python_fails_refresh (test_maintain_docs.DocumentationTests.test_malformed_python_fails_refresh) ... ok
+test_manual_edit_of_generated_note_rejected (test_maintain_docs.DocumentationTests.test_manual_edit_of_generated_note_rejected) ... ok
+test_markdown_outside_prompt_rejected (test_maintain_docs.DocumentationTests.test_markdown_outside_prompt_rejected) ... ok
+test_new_source_requires_documentation (test_maintain_docs.DocumentationTests.test_new_source_requires_documentation) ... ok
+test_relative_import_resolution (test_maintain_docs.DocumentationTests.test_relative_import_resolution) ... ok
+test_removed_module_note_is_pruned (test_maintain_docs.DocumentationTests.test_removed_module_note_is_pruned) ... ok
+test_stale_python_detected (test_maintain_docs.DocumentationTests.test_stale_python_detected) ... ok
+test_temporary_markdown_allowed (test_maintain_docs.DocumentationTests.test_temporary_markdown_allowed) ... ok
+test_tool_changes_require_maintenance_review (test_maintain_docs.DocumentationTests.test_tool_changes_require_maintenance_review) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.325s
+
+OK
